@@ -18,6 +18,8 @@ namespace WEB.Models
         public string SizeName { get; set; }
         public string Url { get; set; }
         public decimal ToTal { get; set; }
+        public decimal TongTien { get; set; }
+        public decimal SLMa { get; set; }
     }
 
     public class update{

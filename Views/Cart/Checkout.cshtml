@@ -1,0 +1,283 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<style type="text/css">
+    * {
+            box-sizing: border-box;
+        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana;
+    }
+    .header {
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+    .logo {
+        flex:30%;
+    }
+    .search {
+        flex:40%;
+        text-align: center;
+    }
+    .order {
+        flex:20%;
+        text-align: right;
+        padding: 14px 20px;
+    }
+    .login {
+        flex:10%;
+        text-align: left;
+        padding: 14px 20px;
+    }
+    .narbar {
+            display: flex;
+            background-color: black;
+        }
+    .narbar a {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px 20px;
+        }
+    .narbar a:hover {
+            background-color: white;
+            color: black;
+        }
+    .banner {
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .footer {
+            background-color: black;
+            color: white;
+            display: flex;
+        }
+    .left {
+        flex: 30%;
+        text-align: left;
+        justify-content: center;
+        padding: 50px;
+    }
+    .mid {
+        flex: 40%;
+        text-align: left;
+        justify-content: center;
+        padding: 50px;
+    }
+    .right {
+        flex: 30%;
+        text-align: left;
+        justify-content: center;
+        padding: 50px;
+    }
+    @*@media only screen and (max-width:700px) {
+            .narbar, .footer {
+                display:flex;
+                flex-direction: column;
+            }
+            .left {
+                width: 100%;
+                text-align: center;
+            }
+            .mid {
+                width: 100%;
+                text-align: center;
+            }
+            .right {
+                width: 100%;
+                text-align: center;
+            }
+        }*@
+
+
+</style>
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+    width: 80%;
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+    margin-left: 10%;
+
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 40%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 60%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+  .container9 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn1 {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+@*@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}*@
+</style>
+<style>
+    h2 {
+        text-align: center;
+    }
+</style>
+<div class="row">
+    <div style="margin-bottom: 20px;" class="col-75">
+        <div class="container9">
+            <form action="/action_page.php">
+
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Thông tin khách hàng</h3>
+                        <label for="hoten"><i class="fa fa-user"></i> Họ Tên </label>
+                        <input type="text" id="fname" name="firstname" placeholder="">
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="">
+                        <label for="diachi"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+                        <input type="text" id="adr" name="address" placeholder="">
+                        <label for="sđt"><i class="fa fa-Phone"></i> Số điện thoại</label>
+                        <input type="text" id="city" name="Phone Number" placeholder="">
+                        <label for="thanhpho"><i class="fa fa-institution"></i> Thành phố</label>
+                        <input type="text" id="city" name="city" placeholder="">
+                    </div>
+
+                    <div class="col-50">
+                        <h3>Thanh toán</h3>
+                        <label for="fname">Chấp nhận các loại thẻ</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <input type="checkbox" id="payment1" name="payment1" value="Thanh toán bằng thẻ Visa ">
+                        <label for="payment1"> Thanh toán bằng thẻ Visa</label><br>
+                        <input type="checkbox" id="payment2" name="payment2" value="Thanh toán chuyển khoản">
+                        <label for="payment2"> Thanh toán chuyển khoản</label><br>
+                        <input type="checkbox" id="payment3" name="payment3" value="Thanh toán khi nhận hàng">
+                        <label for="payment3"> Thanh toán khi nhận hàng</label><br><br>
+                        <input type="submit" value="Submit">
+
+                    </div>
+
+                </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Địa chỉ giao hàng giống địa chỉ thanh toán
+                </label>
+                <input type="submit" value=" Đặt hàng " class="btn1">
+            </form>
+        </div>
+    </div>
+    <div class="col-25">
+        <div class="container">
+            <h4>Giỏ hàng <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>@ViewBag.Info.SLMa</b></span></h4>
+            @foreach (var item in ViewBag.list_detail)
+            {
+            <p><a href="#">@item.Name</a> <span class="price">@item.ToTal</span></p>
+            }
+            <hr>
+            <p>Tổng tiền <span class="price" style="color:black"><b>@ViewBag.Info.TongTien</b></span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function Checkout() {
+        var lst = {};
+        lst.
+    }
+</script>
+
+
+
+
+

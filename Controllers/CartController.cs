@@ -75,5 +75,14 @@ namespace WEB.Controllers
             }
         }
 
+
+        public ActionResult Checkout()
+        {
+            var list_detail = BaseConnectionSql.ExecuteList_Helper<CartModel>("web","sp_CartItem_getAll",null);
+            ViewBag.list_detail = list_detail;
+            var Info = BaseConnectionSql.ExecuteList_Helper<CartModel>("web","sp_CartItem_getAll",null);
+            ViewBag.Info = Info[0];
+            return View();
+        }
     }
 }
